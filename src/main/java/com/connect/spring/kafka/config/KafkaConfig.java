@@ -7,12 +7,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaConfig {
 
-    @Value("${spring.kafka.bootstrap-servers:localhost:9092}")
+    @Value("${kafka.bootstrap-servers:localhost:9092}")
     private String bootStrapServer;
+
+    @Value("${kafka.auto.offset.reset}")
+    private String offsetReset;
 
 
     public String getBootStrapServer() {
         return bootStrapServer;
     }
+
+    public String getOffsetReset() {
+        return offsetReset;
+    }
+
 
 }

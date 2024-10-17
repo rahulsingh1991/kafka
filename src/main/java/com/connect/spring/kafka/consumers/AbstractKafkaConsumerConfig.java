@@ -27,6 +27,7 @@ public abstract class AbstractKafkaConsumerConfig {
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, config.getOffsetReset());//Possible value are earliest, latest, none
         populateConsumerSpecificProp(props);
         return new DefaultKafkaConsumerFactory<>(props);
     }
