@@ -1,5 +1,6 @@
 package com.connect.spring.kafka.config;
 
+import com.connect.spring.kafka.consumers.EmployeeConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.junit.jupiter.api.Test;

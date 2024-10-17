@@ -1,5 +1,6 @@
-package com.connect.spring.kafka.config;
+package com.connect.spring.kafka.consumers;
 
+import com.connect.spring.kafka.config.TopicConfig;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
